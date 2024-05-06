@@ -1,0 +1,174 @@
+html,
+body,
+ul,
+li {
+    margin: 0; padding: 0;
+}
+
+body {
+    background: #202020; font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif;
+}
+
+button,
+input,
+code {
+    display: inline-block; outline: none; font: inherit; border: none; background: #FDE991; padding: 0;
+}
+
+button {
+    color: #C7433E; cursor: pointer;
+}
+
+input {
+    width: 50px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.liked {
+    width: 400px;
+    height: 300px;
+    top: 100px;
+    border-radius: 10px;
+    border: 5px dashed #828282;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disliked {
+    width: 400px;
+    height: 300px;
+    top: 100px;
+    border-radius: 10px;
+    border: 5px dashed #828282;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewport {
+    width: 400px;
+    height: 500px;
+    background: #C7433E;
+    border: 10px solid #ED5D52;
+    position: relative;
+}
+
+#viewport .stack {
+    width: 200px;
+    height: 300px;
+    background: #ED5D52;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 10px;
+}
+
+#viewport li {
+    width: 335px;
+    max-height: 500px;
+    padding: 20px;
+    list-style: none;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: -35px;
+    left: -65px;
+    box-shadow: 0 0 2px rgba(0,0,0,.2), 1px 1px 1px rgba(0,0,0,.2);
+    line-height: 20px;
+    text-align: left;
+    font-size: 16px;
+    border: 10px solid #ECECEC;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: Cambria;
+    z-index: 1000;
+}
+
+.recommendations {
+    opacity: 0;
+    transition: all 0.4s;
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.visible-recs { 
+    opacity: 1
+}
+
+.rec-child {
+    background-color: gray;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.snippet {
+    font-size: 12px;
+    text-overflow: ellipsis;
+    max-width: 500px;
+    line-height: 16px;
+    margin-top: 5px;
+}
+
+.done {
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.next-card {
+    opacity: 1;
+}
+
+#viewport li.in-deck {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+#viewport li.in-deck:last-child {
+    opacity: 1;
+}
+
+#viewport li.in-deck:nth-child(3) {
+    top: 2px; transform: translate(2px, 2px) rotate(0.4deg);
+}
+
+#viewport li.in-deck:nth-child(2) {
+    top: 4px; transform: translate(-4px, -2px) rotate(-1deg);
+}
+
+#control {
+    position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; font-size: 0;
+}
+
+#control button {
+    background: #FFFFFF; color: #373737; font-weight: bold; border: none; font: normal 18px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif; margin: 0 5px; padding: 10px 15px; cursor: pointer; box-shadow: 0 2px 0 #63211F; outline: none; position: relative;
+}
+#control button:active {
+    background: #63211F; color: #FFFFFF; bottom: -2px; box-shadow: none;
+}
+
+#source {
+    width: 500px; margin: 20px auto;
+}
+
+#source a {
+    color: #C7433E;
+}
